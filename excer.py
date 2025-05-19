@@ -26,6 +26,7 @@ def calculate_average_salary():
        count=count+1
    x=sum(my_list)
    avg=x/count
+   
    return avg    
 
 def get_employees_by_dept(department):
