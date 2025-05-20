@@ -33,3 +33,10 @@ def test_get_employees_by_dept():
     y=e_i. get_employees_by_dept("Sales")
     assert(y== myingir_list)
     
+def test_searcher():
+    int_my_lit=[]
+    for i in employee_data:
+        if i["name"][0]=="J":
+            int_my_lit.append(i)
+    y=e_i.find_specific_names("J")
+    assert(y==int_my_lit)
