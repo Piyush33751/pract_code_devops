@@ -48,6 +48,13 @@ def display_records(employee_info):
     print(("Name" + "\t" +"Age" +"\t" +"Department" +"\t" +"Salary" ).expandtabs(15))
     for item in employee_info:
         print((item["name"] + "\t" + str(item["age"]) + "\t" + item["department"] + "\t" + str(item["salary"])).expandtabs(15))
+def find_specific_names(x):
+    my_listy=[]
+    for i in employee_data:
+        if i["name"][0]==x:
+            my_listy.append(i)
+    return my_listy        
+
 
 def display_main_menu():
 
@@ -59,6 +66,7 @@ def display_main_menu():
     print("2 - Display average salary")
     print("3 - Display employee within age range")
     print("4 - Display employee in a department")
+    print("5 - search engine with one letter")
 
 
     print("Q - Quit")
@@ -84,6 +92,12 @@ def display_main_menu():
         employee_info = get_employees_by_dept(department)
         print(get_employees_by_dept(department))
         display_records(employee_info)
+    
+    elif option =='5':
+        x=input("put the specific first letter of the name")
+        gi=find_specific_names(x)
+        display_records(gi)
+
 
     elif option == 'Q':
         quit()
