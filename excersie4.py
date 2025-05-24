@@ -6,21 +6,25 @@ quantity_list= {'apple': 5, 'orange':5, 'watermelon': 1, 'pineapple': 2, 'pear' 
 
 def total_cost_shopping():
     my_list=[]
+    cost=0
     x=0
     for i in price_list:
-         my_list.append(price_list[i]*quantity_list[i])
-    x=sum(my_list)
+        cost=price_list[i]*quantity_list[i]
+        my_list.append(cost)
+    x=sum(my_list)    
     return x
-
 def cost_of_fruits(fruit, quantity):
-    for i in price_list:
-        if(i==fruit):
-            x=price_list[fruit]*quantity
-    return x
-
+    x=price_list[fruit] * quantity
+    return x 
+ 
+def whatever_want(x,y):
+    x=input("Put the name of the fruit you want") 
+    y=int(input("put the nummber of fruits you want"))
+    z=print(cost_of_fruits(x, y))
 def main():
     print(cost_of_fruits('apple', 10))
     print(total_cost_shopping())
+    print(whatever_want())
 
 
 if __name__ == "__main__":
