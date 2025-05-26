@@ -24,7 +24,8 @@ def whatever_want(x,y):
 def main():
     print(cost_of_fruits('apple', 10))
     print(total_cost_shopping())
-    print(whatever_want())
+    # print(whatever_want())
+    print(price_list.get("apple"))
 
 
 if __name__ == "__main__":
