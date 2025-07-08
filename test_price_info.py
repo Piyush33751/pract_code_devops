@@ -9,5 +9,5 @@ def test_total_cost_shopping():
     assert(x==y)
 def test_cost_of_fruit():
     x=1.20 * 10
-    y=th_h.cost_of_fruits('apple', 10)
-    assert(x==y) 
+    y=(th_h.cost_of_fruits('apple', 10))
+    assert(x==y)
